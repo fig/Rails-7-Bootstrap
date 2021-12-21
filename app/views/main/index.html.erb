@@ -1,0 +1,46 @@
+<div class="tool-tips m-5 p-3 border border-info border-4 rounded-3">
+  <h1>Tool-Tips</h1>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+    Tooltip on top
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+    Tooltip on right
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+    Tooltip on left
+  </button>
+</div>
+
+<div class="dropdown m-5 p-3 border border-info border-4 rounded-3">
+  <h1>Drop-Down</h1>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+
+<div class="m-5 p-3 border border-info border-4 rounded-3">
+  <h1>Popover</h1>
+  <button type="button"
+        class="btn btn-lg btn-danger"
+        data-bs-toggle="popover"
+        title="Popover title"
+        data-bs-content="Amazing content, right ?">
+    Click to toggle popover
+  </button>
+</div>
+
+<div class="stimulus m-5 p-3 border border-info border-4 rounded-3">
+  <h1>Stimulus</h1>
+  <p>The text below was inserted by the Stimulus
+    <code>hello_controller.js</code>
+  </p>
+  <%= tag.p data:{controller: 'hello'} %>
+</div>
