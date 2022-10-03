@@ -5,7 +5,7 @@ gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
-gem "pg", "~> 1.1"
+gem "sqlite3", "~> 1.4"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.0"
 gem "redis", "~> 4.0"
