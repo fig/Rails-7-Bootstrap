@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @thing %>
+
+<div>
+  <%= link_to "Edit this thing", edit_thing_path(@thing) %> |
+  <%= link_to "Back to things", things_path %>
+
+  <%= button_to "Destroy this thing",@thing,
+    method: :delete,
+    form: {
+        data: { turbo_confirm: "Are you sure?" }
+    }
+  %>
+</div>
