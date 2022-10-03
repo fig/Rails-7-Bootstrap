@@ -1,0 +1,192 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  Exclude:
+    - bin/*
+    - node_modules/**/*
+    - "**/*.erb"
+    - "**/db/**/*"
+  EnabledByDefault: true
+  NewCops: enable
+  TargetRubyVersion: "3.1"
+
+Bundler/GemComment:
+  Enabled: false
+
+Bundler/GemVersion:
+  Enabled: false
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Layout/LineLength:
+  Description: Limit lines to 100 characters.
+  StyleGuide: "#max-line-length"
+  Max: 80
+  Exclude:
+    - "db/**/*.rb"
+  AllowedPatterns:
+    - 'it { should'
+    - '# '
+  AutoCorrect: true
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Lint/NumberConversion:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  AutoCorrect: false
+
+Lint/UnusedMethodArgument:
+  AutoCorrect: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "*.gemspec"
+    - Guardfile
+    - config/**/*
+    - lib/tasks/**/*
+    - spec/*_spec.rb
+    - spec/**/*_spec.rb
+    
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/**/*
+
+Naming/FileName:
+  Exclude: ["Gemfile"]
+
+Naming/MethodParameterName:
+  MinNameLength: 2
+
+Performance/ChainArrayAllocation:
+  Description:
+    Instead of chaining array methods that allocate new arrays, mutate
+    an existing array.
+  Reference: https://twitter.com/schneems/status/1034123879978029057
+  Enabled: true
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - /**/spec/**/*_spec.rb
+  AllowedMethods:
+    - 'touch'
+
+Rails/DefaultScope:
+  Enabled: false
+
+Rails/RakeEnvironment:
+  Exclude:
+    - lib/tasks/**/*.rake
+    
+Rails/SchemaComment:
+  Enabled: false
+
+RSpec/Capybara/FeatureMethods:
+  Enabled: false
+
+RSpec/DescribedClass:
+  AutoCorrect: true
+
+RSpec/Focus:
+  AutoCorrect: false
+
+RSpec/ImplicitExpect:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 4
+
+RSpec/Pending:
+  Enabled: false
+
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+  AllowBracesOnProceduralOneLiners: true
+  AllowedMethods:
+    - before
+
+Style/ClassMethodsDefinitions:
+  EnforcedStyle: self_class
+
+Style/CollectionMethods:
+  Enabled: false
+  PreferredMethods:
+    collect: map
+    collect!: map!
+    detect: find
+    find_all: select
+    member?: include?
+
+Style/ConstantVisibility:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/InlineComment:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
+
+Style/NumericLiterals:
+  Strict: true
+
+Style/NumericPredicate:
+  AutoCorrect: true
+
+Style/RedundantFetchBlock:
+  SafeForConstants: true
+  AutoCorrect: true
+
+Style/RegexpLiteral:
+  EnforcedStyle: mixed
+
+Style/StringHashKeys:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolProc:
+  AutoCorrect: true
+
+Style/TopLevelMethodDefinition:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/WhileUntilModifier:
+  AutoCorrect: false
+
+Style/YodaCondition:
+  Enabled: false
