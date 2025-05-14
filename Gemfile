@@ -5,7 +5,7 @@ gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
-gem "sqlite3", "~> 1.4"
+gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.0"
 gem "redis", "~> 4.0"
@@ -20,9 +20,5 @@ group :development, :test do
 end
 
 group :development do
-  gem "rubocop", "~> 1.36"
-  gem "rubocop-performance", "~> 1.15"
-  gem "rubocop-rails", "~> 2.16"
-  gem "rubocop-rspec", "~> 2.13"
   gem "web-console"
 end
